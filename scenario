@@ -16,8 +16,8 @@ row #06 : File name & path for the Results
 
 META_STOP
 Reduced_dataset
-./datasets/T0.xyzv
-./datasets/T0_ephbody.xyzv
+./datasets/T1y.xyzv
+./datasets/T1y_ephbody.xyzv
 PINV
-./timeStep
-results_scenario-0_1.0
+./timeSteps
+results_testNew
