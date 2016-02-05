@@ -7,17 +7,44 @@ REFERENCE_FRAME : heliocentric ecliptic J2000
 
 META_START
 
+(lines starting with "#" are allowed and interpreted as comments)
 row #01 : Scenario name
-row #02 : Trajectory file name & path
-row #03 : One body's ephemerids file name & path
-row #04 : Type of calculation
-row #05 : Sampling file name
-row #06 : File name & path for the Results
+# Reference trajectory:
+row #02 : Reference trajectory file name & path
+row #03 : <Ne>, Nb.of ephemerids (uint32)
+row #03+(1..Ne) :
+  col.#(01..10): <Body name>
+  col.#11: left blank
+  col.#(12..[EOL]): Body's ephemerids file name & path
+# Actual trajectory to be compared with Reference Trajectory:
+row #04+Ne : Actual trajectory file name & path
+row #04+Ne+(1..Ne) :
+  col.#(01..10): <Body name> (must fit with previous section)
+  col.#11: left blank
+  col.#(12..[EOL]): From actual traj.Body's directions file name & path
+# Computed comparisons:
+row #05+2*Ne : Type of calculation
+row #06+2*Ne : Sampling file name
+row #07+2*Ne : File name & path for the Results
+row #08+2*Ne : <Start> <Intervals> <Stop> of computation (in time steps, uint32)
 
 META_STOP
+#-----------------------------
 Reduced_dataset
+#-----------------------------
+# Reference trajectory:
+./datasets/T0.xyzv
+1
+JUPITER    ./datasets/T0_ephbody.xyzv
+#-----------------------------
+# Actual trajectory to be compared with Reference Trajectory:
 ./datasets/T1y.xyzv
-./datasets/T1y_ephbody.xyzv
+JUPITER    ./datasets/T1y_ephbody.xyzv
+#-----------------------------
+# Computed comparisons
 PINV
 ./timeSteps
 results_testNew
+30, 5, 60
+#-----------------------------
+

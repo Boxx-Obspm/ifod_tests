@@ -1,6 +1,7 @@
 % ifod code's location
 % (to be coded as cmd line or default file later)
 
+clear;
 codPath = '../inflightOD';
 scnPath = './';
 scnFile = strcat(scnPath, 'scenario');
@@ -8,8 +9,13 @@ scnFile = strcat(scnPath, 'scenario');
 %% general test
 
 tf = fopen('test_results', 'a');
-fprintf(tf, '\nTests - New features: %s\n', date);
+fprintf(tf, '\n--------------------\n');
+fprintf(tf, 'Tests - New features: %s\n', date);
 fprintf(tf, '--------------------\n');
+tested=input('Tested in both Octave + Matlab ("Yes" otherwise no)?', 's');
+if (length(tested)!=3) tested='NO*'; end;
+if (tested!='yes') tested='** NO **'; end;
+fprintf(tf, 'Tested in both Octave & Matlab? %s\n', tested);
 fprintf(tf, 'Reduced scenario: %s\n', scnFile);
 fprintf(tf, 'Expected inputs:\n');
 fprintf(tf, '- Reference Trajectory set "T0"\n');
@@ -61,7 +67,6 @@ fprintf(tf, '\n');
 % x commenter les resultats pour comprendre les unites
 
 fprintf(tf, 'Interpolations: test_interpolation.m\n');
-[dr,Dvectr,Dvelocity]=test_interpolation(ii,timeStep,trajectory_name,trajectory_name_ephjup);
 
 % - sortir time_step de la release ifod car non embarquee
 

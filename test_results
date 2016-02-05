@@ -1,30 +1,8 @@
 
-Tests - New features: 
-
-Tests - New features: 
-
-Tests - New features: 
 --------------------
-Reduced scenario: ./scenario
-Expected inputs:
-- Reference Trajectory set "T0"
-- Actual Trajectory set "T1"
-- Intervals between measurements for OD
-Expected outputs:
-- OD, i.e. reconstructed X for every time step
-- difference between OD (reconstructed) and T1 (expected)
-
-data_extraction.m:
-
-Interpolations
->= Inputs: ii,T,dt,Timelist
-=> Outputs: timeStep
-
->= ii: 50
->= T("ii"), dt("ii"): 58165 28859.1 9 22 12
-
-Tests - New features: 02-Feb-2016
+Tests - New features: 05-Feb-2016
 --------------------
+Tested in both Octave & Matlab? ** NO **
 Reduced scenario: ./scenario
 Expected inputs:
 - Reference Trajectory set "T0"
