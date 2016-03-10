@@ -2,7 +2,7 @@
 % (to be coded as cmd line or default file later)
 
 clear;
-codPath = '../inflightOD';
+codPath = '../ifod_eval';
 scnPath = './';
 scnFile = strcat(scnPath, 'scenario');
 
@@ -27,7 +27,7 @@ fprintf(tf, '- difference between OD (reconstructed) and T1 (expected)\n');
 fprintf(tf, '\n');
 
 addpath(codPath);
-data_extraction
+data_extraction;
 % Ok: it DOES produce a result file (name prefix given in Scenario) for every timesteps in T0
 % => validate the inputs:
 %    (new feature) Always same T0, selections for T1 => selection for T0 to be allowed
@@ -46,21 +46,11 @@ fprintf(tf, '>= Inputs: ii,T,dt,Timelist\n');
 fprintf(tf, '=> Outputs: timeStep\n');
 fprintf(tf, '\n');
 
-% JD  = 2458186.50068339239805937
-% MJD = JD-MJD_0 = JD-2400000.5= 58186.00068..
 ii=50; iiT=2; % iiT=2 pour MJD = 58165 days +28859.05 sec
 % all other inputs available in workspace from data_extraction
 fprintf(tf, '>= ii: %d\n', ii);
 fprintf(tf, '>= T("ii"), dt("ii"): %d MJD %6.0f s. %d h. %d h. %d h.\n' , T(iiT,:), dt(iiT,:));
 fprintf(tf, '>= Timelist(ii): %10.2f JD\n', TimeList1(ii));
-outp = time_step(ii,T,dt,trajectory_name,trajectory_name_ephjup);
-fprintf(tf, '=> outp(1..3): %d %d %d\n', outp);
-%fprintf(tf, '=> "ii-3", Timelist("ii-3"): -%d, %10.2f JD\n', sum(outp(1:3)), TimeList1(ii-sum(outp(1:3))));
-%fprintf(tf, '=> "ii-2", Timelist("ii-2"): -%d, %10.2f JD\n', sum(outp(1:2)), TimeList1(ii-sum(outp(1:2))));
-%fprintf(tf, '=> "ii-1", Timelist("ii-1"): -%d, %10.2f JD\n', sum(outp(1:1)), TimeList1(ii-sum(outp(1:1))));
-fprintf(tf, '=> "ii+1", Timelist("ii+1"): +%d, %10.2f JD\n', sum(outp(1:1)), TimeList1(ii+sum(outp(1:1))));
-fprintf(tf, '=> "ii+2", Timelist("ii+2"): +%d, %10.2f JD\n', sum(outp(1:2)), TimeList1(ii+sum(outp(1:2))));
-fprintf(tf, '=> "ii+3", Timelist("ii+3"): +%d, %10.2f JD\n', sum(outp(1:3)), TimeList1(ii+sum(outp(1:3))));
 fprintf(tf, '\n');
 
 % x produire un jeu d'essai simple
