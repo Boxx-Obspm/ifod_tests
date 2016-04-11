@@ -27,6 +27,7 @@ fprintf(tf, '- difference between OD (reconstructed) and T1 (expected)\n');
 fprintf(tf, '\n');
 
 addpath(codPath);
+datapath='../ifod_tests/';
 data_extraction;
 % Ok: it DOES produce a result file (name prefix given in Scenario) for every timesteps in T0
 % => validate the inputs:

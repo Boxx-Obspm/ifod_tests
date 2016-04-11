@@ -12,9 +12,9 @@ COLUMN #01 : date (in JD)
 COLUMN #02 : Position along the X axis (in km)
 COLUMN #03 : Position along the Y avis (in km)
 COLUMN #04 : Position along the Z axis (in km)
-COLUMN #05 : Velocity along the X axis (in km)
-COLUMN #06 : Velocity along the Y axis (in km)
-COLUMN #07 : Velocity along the Z axis (in km)
+COLUMN #05 : Velocity along the X axis (in m/s)
+COLUMN #06 : Velocity along the Y axis (in m/s)
+COLUMN #07 : Velocity along the Z axis (in m/s)
 COLUMN #08 : radii of BIRDY from the sun (in km)
 
 META_STOP
