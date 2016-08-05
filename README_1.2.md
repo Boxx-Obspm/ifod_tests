@@ -16,3 +16,5 @@ This branch gathers code to test the IFOD and shall *not* contain IFOD. It tests
 - non-regression of previous features, especially interfaces
 - new features to be demonstrated with well-selected, short datasets
 - performances of the ifod algorithm
+
+NOT SUITED FOR IFOD WITH N=4 MEASUREMENTS!!
