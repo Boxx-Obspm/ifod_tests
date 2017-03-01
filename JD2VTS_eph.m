@@ -35,7 +35,7 @@ while 1
         break;
     end;
 end;
-data = fscanf(f1,'%f %f %f %f %f %f %f %f %f %f %f %f', [12 inf]);
+data = fscanf(f1,'%f %f %f %f', [4 inf]);
 data = data';
 fclose(f1);
 

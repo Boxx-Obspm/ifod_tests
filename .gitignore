@@ -7,3 +7,5 @@ octave-workspace
 *.m~
 useless_*
 *_out
+outs/*
+ifod_log

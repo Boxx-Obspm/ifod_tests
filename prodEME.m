@@ -17,12 +17,12 @@ function myData = prodEME()
 clear;
 global cubesat ceresData jupiterData earthData marsData saturnData;
 au2km = 149597870.7; % km (source obspm.fr, 29/01/2014)
-cubesat = readVTS('EME/58122+SOI_v6.4_jdv000_312_vts.xyzv', 1./au2km);
-ceresData = readImcce('EME/Ceres.imcce', 1.);
-jupiterData = readImcce('EME/Jupiter.imcce', 1.);
-earthData = readImcce('EME/Earth.imcce', 1.);
-marsData = readImcce('EME/Mars.imcce', 1.);
-saturnData = readImcce('EME/Saturn.imcce', 1.);
+cubesat = readVTS('../cas_EME/PI/58122+SOI_v6.4_jdv+1_312.xyzv', 1./au2km);
+ceresData = readImcce('../cas_EME/Ceres.imcce', 1.);
+jupiterData = readImcce('../cas_EME/Jupiter.imcce', 1.);
+earthData = readImcce('../cas_EME/Earth.imcce', 1.);
+marsData = readImcce('../cas_EME/Mars.imcce', 1.);
+saturnData = readImcce('../cas_EME/Saturn.imcce', 1.);
 t0c=cubesat(1,1);
 t0p=ceresData(1,1)-t0c;
 
