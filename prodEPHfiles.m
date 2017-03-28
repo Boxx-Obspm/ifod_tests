@@ -11,7 +11,7 @@
 %     - Tfpath (Target) is IMCCE-formatted
 % O/: VTS-formatted ephemerides of T from S, time stepped on S on the common time interval.
 % F/: - S to T directions are expressed in latitudes, longitudes and distances
-%     - light(travel is not taken into account
+%     - light-travel is not taken into account
 
 function outs = prodEPHfiles(Sfpath, Tfpath)
 v_inputs = '2.0';
@@ -40,6 +40,7 @@ while 1
 end;
 fprintf('ATTENTION: debut donnees IMCCE en colonne 33\n');
 tdata = fscanf(tf,'%*33c %f, %f, %f, %f, %f, %f, %f', [7 inf]);
+% tdata = fscanf(tf,'%*35c %f, %f, %f, %f, %f, %f, %f', [7 inf]); % if name "Jupiter," at line's start
 tdata = tdata';
 fclose(tf);
 

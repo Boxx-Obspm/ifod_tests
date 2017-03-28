@@ -1,5 +1,5 @@
 # ifod_tests: Tests for inflightOD software
-# Version & Date:   V2.0 02-03-2017, Boris Segret
+# Version & Date:   V2.1 27-Mar-2017, Boris Segret
 # CL=2
 #
 # runTests.m : main program, for MATLAB or OCTAVE
