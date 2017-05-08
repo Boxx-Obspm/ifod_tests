@@ -17,3 +17,4 @@ This branch gathers code to test the IFOD and shall *not* contain IFOD. It tests
 - functional validation (performance tests require full datasets)
 
 NOT SUITED FOR IFOD WITH N=4 MEASUREMENTS!!
+============> # - README_v2.2.md <================ 2.2 = NEXT DELIVERY (May 2017)
