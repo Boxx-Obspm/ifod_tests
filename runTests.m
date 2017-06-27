@@ -1,3 +1,4 @@
+% CL=0, v1.x, Author B.Segret, not suited for IFOD v1.9!
 % ifod code's location
 % (to be coded as cmd line or default file later)
 
