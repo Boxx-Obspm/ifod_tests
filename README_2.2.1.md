@@ -1,5 +1,6 @@
 # ifod_tests: Tests for inflightOD software
-# Version & Date:   V2.2 27-Jun-2017, Boris Segret
+# Version & Date:   V2.2.1 11-Oct-2017, Boris Segret
+#                   - fit with IFOD v1.9.1 = final release with KF before WLS
 # CL=2
 #
 # runTests.m : main program, for MATLAB or OCTAVE
